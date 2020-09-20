@@ -5,6 +5,8 @@ import { hot } from 'react-hot-loader';
 
 import Home from './views/Home.jsx';
 
+import './styles/main.scss';
+
 class App extends Component {
   render() {
     return (

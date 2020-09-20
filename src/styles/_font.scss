@@ -1,0 +1,94 @@
+$title-font: 'Matthan';
+$paragraph-font: Roboto;
+
+@font-face {
+  font-family: 'Matthan';
+  src: url('../static/fonts/matthan_sans_italic-webfont.woff2') format('woff2'),
+    url('../static/fonts/matthan_sans_italic-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Matthan';
+  src: url('../static/fonts/matthan_sans_regular-webfont.woff2') format('woff2'),
+    url('../static/fonts/matthan_sans_regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+:root {
+  --base-font-size: 0.9em;
+  --type-scale: 1.25;
+  --h5: calc(var(--base-font-size) * var(--type-scale));
+  --h4: calc(var(--h5) * var(--type-scale));
+  --h3: calc(var(--h4) * var(--type-scale));
+  --h2: calc(var(--h3) * var(--type-scale));
+  --h1: calc(var(--h2) * var(--type-scale));
+}
+
+h1 {
+  margin-top: 0;
+  font-size: var(--h1);
+}
+
+h2 {
+  font-size: var(--h2);
+}
+
+h3 {
+  font-size: var(--h3);
+}
+
+h4 {
+  font-size: var(--h4);
+}
+
+h5 {
+  font-size: var(--h5);
+}
+
+html {
+  font-size: 100%;
+}
+
+body {
+  font-weight: 400;
+  line-height: 1.65;
+  color: red;
+}
+
+p {
+  margin-bottom: 1.15rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 2.75rem 0 1.05rem;
+  font-family: $title-font;
+  font-weight: 700;
+  line-height: 1.15;
+  color: red;
+}
+
+small,
+.text_small {
+  font-size: calc(var(--base-font-size) / var(--type-scale));
+}
+
+@media (min-width: 480px) {
+  :root {
+    --base-font-size: 20em;
+    --type-scale: 1.1;
+  }
+}
+
+@media (min-width: 768px) {
+  :root {
+    --base-font-size: 2em;
+    --type-scale: 1.15;
+  }
+}
