@@ -10,13 +10,13 @@ import './styles/main.scss';
 class App extends Component {
   render() {
     return (
-      <body className='App' fontFamily='fontFamily'>
+      <div className='App' fontFamily='fontFamily'>
         <Suspense>
           <Router>
             <Home path='/' pathname='Landing' />
           </Router>
         </Suspense>
-      </body>
+      </div>
     );
   }
 }
