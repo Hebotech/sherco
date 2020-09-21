@@ -48,6 +48,11 @@ h5 {
   font-size: var(--h5);
 }
 
+h6,
+button {
+  font-size: calc(var(--h5) * 0.7);
+}
+
 html {
   font-size: 100%;
 }
@@ -67,7 +72,9 @@ h5 {
   line-height: 1.15;
   color: $title-font;
 }
-
+button {
+  font-family: 'Matthan';
+}
 small,
 .text_small {
   font-size: calc(var(--base-font-size) / var(--type-scale));
@@ -75,7 +82,7 @@ small,
 
 @media (min-width: 480px) {
   :root {
-    --base-font-size: 20em;
+    --base-font-size: 2em;
     --type-scale: 1.1;
   }
 }
