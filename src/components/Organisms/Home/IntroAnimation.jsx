@@ -131,7 +131,6 @@ export default function IntroAnimation(props) {
         start: 'top bottom',
         end: '+=700',
         scrub: true,
-        markers: true,
       },
     });
 
