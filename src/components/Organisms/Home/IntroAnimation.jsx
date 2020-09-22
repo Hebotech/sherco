@@ -3,22 +3,19 @@ import React, { useEffect, useState, useRef } from 'react';
 import { gsap, TweenLite } from 'gsap';
 import MorphSVGPlugin from 'gsap/MorphSVG';
 import SplitText from 'gsap/SplitText';
+import ScrollTrigger from 'gsap/ScrollTrigger';
 
 import TextAnimation from 'Molecules/Home/TextAnimation.jsx';
 import LogoAnimation from 'Molecules/Home/LogoAnimation.jsx';
 
 export default function IntroAnimation(props) {
-  gsap.registerPlugin(MorphSVGPlugin, SplitText);
+  gsap.registerPlugin(MorphSVGPlugin, SplitText, ScrollTrigger);
 
   var logoRef = useRef(null);
   var letterLogoRef = useRef(null);
   var titleAnimation = useRef(null);
   var animationRef = useRef(null);
-  var firstTitleRed = useRef(null);
-  var heroRef = useRef(null);
 
-  let halfVW = innerWidth / 2;
-  let halfVH = innerHeight / 2;
   var mouse = { x: 0, y: 0 };
 
   var cx = window.innerWidth / 2;
@@ -38,7 +35,6 @@ export default function IntroAnimation(props) {
       let tiltx = dy / cy;
       let tilty = -(dx / cx);
       let radius = Math.sqrt(Math.pow(tiltx, 2) + Math.pow(tilty, 2));
-      let degree = radius * 20;
 
       TweenLite.to('._hero-header', 1, {
         backgroundPosition: `${dy * 0.01}px,${dx * 0.01}px`,
@@ -120,13 +116,77 @@ export default function IntroAnimation(props) {
       .to(
         '.intro-animation svg',
         {
-          scale: 1.5,
+          scale: `${window.innerWidth >= 460 ? 1.5 : 1}`,
+
           duration: 1,
           ease: 'ease-in-out',
         },
         '-=1.2'
       )
       .eventCallback('onComplete', () => setAnimationFinish(true));
+
+    let tl2 = gsap.timeline({
+      scrollTrigger: {
+        trigger: '.home-view ._feature',
+        start: 'top bottom',
+        end: '+=700',
+        scrub: true,
+        markers: true,
+      },
+    });
+
+    tl2
+      .fromTo(
+        '._hero-header',
+        {
+          backgroundSize: '100%',
+        },
+        {
+          backgroundSize: '120%',
+          ease: 'ease-in-out',
+        }
+      )
+      .to(
+        '.intro-animation svg',
+        {
+          opacity: 0,
+          translateY: '-5em',
+          ease: 'ease-in-out',
+        },
+        '<'
+      )
+      .from('.home-view ._feature img', {
+        ease: 'power1',
+        translateX: '-5em',
+        translateY: '-5em',
+        opacity: 0,
+      })
+      .addLabel('HeroHeader')
+      .fromTo(
+        '.home-view ._feature',
+        {
+          backgroundImage: `linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0) 20%,
+      rgba(0, 0, 0, 100) 100%
+    )`,
+        },
+        {
+          backgroundImage: `linear-gradient(
+      0deg,
+        rgba(0, 0, 0, 0)60%,
+        rgba(0, 0, 0, 0) 100%
+    )`,
+          ease: 'power4',
+        },
+        '<'
+      )
+      .from('.home-view ._feature .__cta', {
+        ease: 'power1',
+        translateX: '5em',
+        translateY: '5em',
+        opacity: 0,
+      });
   }, []);
 
   return (

@@ -15,6 +15,10 @@ module.exports = (_, env) => {
             use: ['file-loader'],
           },
           {
+            test: /\.(jpg|png|svg)$/,
+            use: ['file-loader'],
+          },
+          {
             test: /\.(js|jsx)$/,
             exclude: /(node_modules|bower_components)/,
             loader: 'babel-loader',

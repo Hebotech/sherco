@@ -22,7 +22,6 @@
         opacity: 0;
       }
     }
-
     ._title_animation {
       span {
         color: $alpha-color;
@@ -37,11 +36,20 @@
     z-index: 2;
     letter-spacing: 0.2em;
     background-image: linear-gradient(
-        90deg,
-        rgba(0, 0, 0, 0.24) 0%,
-        rgba(0, 0, 0, 0.26) 100%
+        0deg,
+        rgba(0, 0, 0, 80) 0%,
+        rgba(0, 0, 0, 0.01) 100%
       ),
-      url(https://www.sherco.com/wp-content/uploads/accueil.jpg);
+      url(../static/images/hero-mobile.jpg);
+    @media screen and (min-width: 750px) {
+      background-image: linear-gradient(
+          0deg,
+          rgba(0, 0, 0, 80) 0%,
+          rgba(0, 0, 0, 0.01) 100%
+        ),
+        url(../static/images/hero-desktop.jpg);
+      background-size: fit;
+    }
     background-size: cover;
     background-position: center left;
     width: 100vw;
@@ -59,20 +67,32 @@
       text-decoration: solid underline $complementary-color;
       transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
     }
-
     ._image {
       border-radius: 4px;
-      box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.4);
       position: relative;
       &:nth-of-type(even) {
         margin-top: -30%;
-        margin-left: 20%;
-        width: 80%;
+        margin-left: 40%;
+        width: 60%;
+        box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.4);
+        &:hover {
+          box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5),
+            0px 0px 20px -5px $alpha-color;
+        }
       }
       &:nth-of-type(odd) {
-        width: 60%;
+        box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.4);
+        width: 89%;
         margin-right: 20%;
+        &:hover {
+          box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5),
+            0px 0px 10px -1px $alpha-color;
+        }
       }
+      &:hover {
+        transition: box-shadow 0.5s ease-in-out;
+      }
+      transition: box-shadow 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
     }
   }
 }

@@ -1,29 +1,36 @@
 import React from 'react';
 
+import ButtonForm from 'Atoms/ButtonForm';
+
 export default function Features() {
   return (
     <div className='_feature text-center container-fluid'>
-      <h2>La nueva experiencia </h2>
-      <div className='row m-0 mt-5 text-center justify-content-center align-items-center'>
-        <div className='col-md-6  col-12'>
+      <div className='row m-0 pt-5 text-center justify-content-around align-items-center'>
+        <div className='col-md-6 col-12 '>
           <img
             className='_image img-fluid'
-            src='https://www.sherco.com/wp-content/uploads/FEK7WqZa-600x600.jpg'
-            alt=''
+            src='/images/moto-enduro.jpg'
+            alt='Sherco México Enduro'
+            loading='lazy'
           />
           <img
             className='_image img-fluid'
-            src='https://www.sherco.com/wp-content/uploads/CDF-07-600x600.jpg'
-            alt=''
+            src='/images/team-mexico.jpg'
+            alt='Sherco México'
+            loading='lazy'
           />
         </div>
-        <div className='col-md-6 col-12 text-left'>
-          <h3>Motos de enduro por fin en México</h3>
-          <p>
-            Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem
-            ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum
+        <div className='col-md-4 col-12 text-left __cta'>
+          <h2>Sé parte del movimiento </h2>
+          <p className='mt-3 mb-3'>
+            Sherco es una marca internacional que está especialmente orientada a
+            <strong> vehículos todoterreno de alta calidad.</strong>
+            <br />
+            Sí te gusta la emoción de sentir el viento en tu rostro y la
+            <strong> energía de la motocicleta perfecta </strong>, llegaste al
+            lugar indicado.
           </p>
-          <button>Comprar ahora</button>
+          <ButtonForm />
         </div>
       </div>
     </div>

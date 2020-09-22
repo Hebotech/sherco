@@ -7,6 +7,7 @@ $paragraph-font: Roboto;
     url('../static/fonts/matthan_sans_italic-webfont.woff') format('woff');
   font-weight: normal;
   font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
@@ -15,6 +16,7 @@ $paragraph-font: Roboto;
     url('../static/fonts/matthan_sans_regular-webfont.woff') format('woff');
   font-weight: normal;
   font-style: normal;
+  font-display: swap;
 }
 
 :root {
@@ -25,6 +27,7 @@ $paragraph-font: Roboto;
   --h3: calc(var(--h4) * var(--type-scale));
   --h2: calc(var(--h3) * var(--type-scale));
   --h1: calc(var(--h2) * var(--type-scale));
+  --buton-font: calc(var(--h5) * (var(--type-scale) * 0.7));
 }
 
 h1 {
@@ -49,8 +52,9 @@ h5 {
 }
 
 h6,
-button {
-  font-size: calc(var(--h5) * 0.7);
+button,
+.cta-form {
+  font-size: var(--buton-font);
 }
 
 html {
@@ -66,17 +70,18 @@ h2,
 h3,
 h4,
 h5 {
-  margin: 2.75rem 0 1.05rem;
   font-family: $title-font;
   font-weight: 700;
   line-height: 1.15;
   color: $title-font;
 }
-button {
+button,
+.cta-form {
   font-family: 'Matthan';
 }
 small,
 .text_small {
+  font-family: Roboto;
   font-size: calc(var(--base-font-size) / var(--type-scale));
 }
 
