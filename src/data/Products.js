@@ -1,46 +1,5 @@
 export const products = [
   {
-    titles: '300 SE-R',
-    description: 'IMPARABLE',
-    features: [
-      'Suspensiones DEL. / TRAS. KYB',
-      'Batería SHIDO de iones de litio',
-      'Placa protectora de cárter AXP',
-      'Conjunto de escape completo Akrapovič',
-      'Puños Domino bicolores',
-      'Llantas Excel azules',
-      'Disco de freno delantero Galfer',
-    ],
-    gallery: [
-      'https://www.sherco.com/wp-content/uploads/SEF_250-300_F_Side_1-600x400.jpg',
-      'https://www.sherco.com/wp-content/uploads/SEF_250-300_F_Side_2-600x400.jpg',
-      'https://www.sherco.com/wp-content/uploads/SEF_250-300_F_3-600x400.jpg',
-      'https://www.sherco.com/wp-content/uploads/SEF_250-300_F_1-600x400.jpg',
-      'https://www.sherco.com/wp-content/uploads/SEF_250-300_F_2-600x400.jpg',
-    ],
-    images: [
-      'https://www.sherco.com/wp-content/uploads/01_300-SEF-FACTORY-WEB-1200px.jpg',
-      'https://www.sherco.com/wp-content/uploads/02_300-SEF-FACTORY-WEB-1200px.jpg',
-      'https://www.sherco.com/wp-content/uploads/03_300-SEF-FACTORY-WEB-1200px.jpg',
-      'https://www.sherco.com/wp-content/uploads/04_300-SEF-FACTORY-WEB-1200px.jpg',
-      'https://www.sherco.com/wp-content/uploads/05_300-SEF-FACTORY-WEB-1200px.jpg',
-      'https://www.sherco.com/wp-content/uploads/06_300-SEF-FACTORY-WEB-1200px.jpg',
-      'https://www.sherco.com/wp-content/uploads/07_300-SEF-FACTORY-WEB-1200px.jpg',
-      'https://www.sherco.com/wp-content/uploads/08_300-SEF-FACTORY-WEB-1200px.jpg',
-      'https://www.sherco.com/wp-content/uploads/09_300-SEF-FACTORY-WEB-1200px.jpg',
-      'https://www.sherco.com/wp-content/uploads/10_300-SEF-FACTORY-WEB-1200px.jpg',
-      'https://www.sherco.com/wp-content/uploads/11_300-SEF-FACTORY-WEB-1200px.jpg',
-      'https://www.sherco.com/wp-content/uploads/12_300-SEF-FACTORY-WEB-1200px.jpg',
-      'https://www.sherco.com/wp-content/uploads/13_300-SEF-FACTORY-WEB-1200px.jpg',
-      'https://www.sherco.com/wp-content/uploads/14_300-SEF-FACTORY-WEB-1200px.jpg',
-      'https://www.sherco.com/wp-content/uploads/15_300-SEF-FACTORY-WEB-1200px.jpg',
-      'https://www.sherco.com/wp-content/uploads/16_300-SEF-FACTORY-WEB-1200px.jpg',
-      'https://www.sherco.com/wp-content/uploads/17_300-SEF-FACTORY-WEB-1200px.jpg',
-      'https://www.sherco.com/wp-content/uploads/18_300-SEF-FACTORY-WEB-1200px.jpg',
-      'https://www.sherco.com/wp-content/uploads/19_300-SEF-FACTORY-WEB-1200px.jpg',
-    ],
-  },
-  {
     titles: '300 SEF FACTORY',
     description: 'IMPARABLE',
     features: [
@@ -82,7 +41,7 @@ export const products = [
     ],
   },
   {
-    titles: '250 SE-R',
+    titles: '300 SEF FACTORY',
     description: 'IMPARABLE',
     features: [
       'Suspensiones DEL. / TRAS. KYB',

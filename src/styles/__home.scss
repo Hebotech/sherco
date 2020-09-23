@@ -97,9 +97,28 @@
   }
 }
 .product-experience {
+  .swiper-scrollbar {
+    bottom: 10%;
+    @media screen and (min-width: 750px) {
+      top: 05%;
+    }
+    cursor: move;
+  }
+  .swiper-scrollbar-drag {
+    @media screen and (min-width: 750px) {
+      margin-top: 0;
+    }
+    margin-top: -0.5%;
+    height: 20px;
+    border-radius: 50px;
+    background-color: $alpha-color;
+  }
   .swiper-slide {
     transition: all 0.5s ease-in;
     .active-slide {
+      h1 {
+        border-left: 5px solid $complementary-color;
+      }
       transition: all 0.5s ease-in;
     }
     .non-active-slide {

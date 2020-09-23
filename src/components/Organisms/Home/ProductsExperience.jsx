@@ -1,22 +1,31 @@
 import React, { useState } from 'react';
 
-import Product from 'Molecules/Home/Product';
-import ProductCarousel from 'Molecules/Home/Products/ProductCarousel';
-
 import { products } from '../../../data/Products';
 
+import ProductHome from 'Molecules/Home/Products/ProductHome';
+
 function ProductsExperience() {
-  let [motorcycleOpen, setMotorcycleOpen] = useState(false);
+  const [motorcycleOpen, setMotorcycleOpen] = useState(false);
+
+  const toggleMotorcycleOpen = () => {
+    motorcycleOpen === true
+      ? setMotorcycleOpen(false)
+      : setMotorcycleOpen(true);
+  };
 
   return (
-    <div className='container-fluid  align-items-center product-experience'>
-      <div className='row justify-content-center mt-5 mb-5 m-0'>
-        <div className='col-11 swiperr'>
-          <ProductCarousel
-            products={products}
-            infoState={{ set: setMotorcycleOpen, last: motorcycleOpen }}
+    <div className='container-fluid align-items-center product-experience'>
+      <div className='row justify-content-center justify-content-md-around mt-5 mb-5 m-0'>
+        {products.map((product, productIndex) => (
+          <ProductHome
+            key={productIndex}
+            product={product}
+            toggleMotorcycleOpen={toggleMotorcycleOpen}
+            motorcycleOpen={motorcycleOpen}
+            productIndex={productIndex}
           />
-        </div>
+        ))}
+        <div className='col-6 swiperr'></div>
       </div>
     </div>
   );

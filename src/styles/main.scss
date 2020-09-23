@@ -2,7 +2,23 @@
 @import 'colors';
 @import 'font';
 @import '_home';
-button,
+
+button {
+  border-radius: 4px;
+  padding: 1% 6%;
+  border: none;
+  text-transform: uppercase;
+  background-color: $alpha-color;
+  color: white;
+  transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  &:hover,
+  &.open {
+    background-color: $complementary-color;
+    color: $alpha-color;
+    letter-spacing: 0.05em;
+    transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+}
 .cta-form {
   border-radius: 4px;
   padding: 3% 6%;
