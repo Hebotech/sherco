@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 
 import GalleryImages from 'Molecules/Home/Products/GalleryImages';
 
-function Product({ product: { titles, description, images } }) {
+function Product({ product: { titles, description, images, gallery } }) {
   return (
     <div className='row m-0'>
       <h2>{titles}</h2>
@@ -12,8 +12,7 @@ function Product({ product: { titles, description, images } }) {
         <p>{description}</p>
       </div>
       <div className='col-md-3 col-12'>
-        <GalleryImages images={images} />
-        {/* <pre>{JSON.stringify(images, null, 2)}</pre> */}
+        <GalleryImages images={gallery} />
       </div>
     </div>
   );

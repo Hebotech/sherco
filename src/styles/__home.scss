@@ -96,3 +96,18 @@
     }
   }
 }
+.product-experience {
+  .swiper-slide {
+    transition: all 0.5s ease-in;
+    .active-slide {
+      transition: all 0.5s ease-in;
+    }
+    .non-active-slide {
+      transition: all 0.5s ease-out;
+      transform: scale(0.5);
+      opacity: 0.5;
+    }
+    .slide-product {
+    }
+  }
+}

@@ -11,7 +11,8 @@ button,
   background-color: $alpha-color;
   color: white;
   transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-  &:hover {
+  &:hover,
+  &.open {
     background-color: $complementary-color;
     color: $alpha-color;
     letter-spacing: 0.05em;
