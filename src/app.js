@@ -12,11 +12,9 @@ class App extends Component {
   render() {
     return (
       <div className='App' fontFamily='fontFamily'>
-        <Suspense>
-          <Router>
-            <Home path='/' pathname='Landing' />
-          </Router>
-        </Suspense>
+        <Router>
+          <Home path='/' pathname='Landing' />
+        </Router>
         <FooterNav />
       </div>
     );

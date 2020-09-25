@@ -1,6 +1,11 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, lazy, Suspense } from 'react';
 
-import ActiveProductPresentation from 'Molecules/Home/Products/ActiveProductPresentation';
+const ActiveProductPresentation = lazy(() =>
+  import(
+    /* webpackChunkName: "active-product" */
+    'Molecules/Home/Products/ActiveProductPresentation'
+  )
+);
 
 export default function ProductHome({
   product,
@@ -34,10 +39,18 @@ export default function ProductHome({
       {activeProduct ? (
         <>
           <h3>{product.titles}</h3>
-          <ActiveProductPresentation
-            options={{ motorcycleOpen, handleButton, productIndex }}
-            product={product}
-          />
+          <Suspense
+            fallback={
+              <div class='spinner-border text-primary' role='status'>
+                <span class='sr-only'>Loading...</span>
+              </div>
+            }
+          >
+            <ActiveProductPresentation
+              options={{ motorcycleOpen, handleButton, productIndex }}
+              product={product}
+            />
+          </Suspense>
         </>
       ) : (
         <>

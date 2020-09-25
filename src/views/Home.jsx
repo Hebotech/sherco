@@ -1,15 +1,37 @@
-import React, { useRef } from 'react';
+import React, { lazy, useState, Suspense } from 'react';
 
 import HeroHeader from 'Organisms/Home/HeroHeader.jsx';
 import Features from 'Organisms/Home/Features.jsx';
-import ProductsExperience from 'Organisms/Home/ProductsExperience.jsx';
+const ProductsExperience = lazy(() =>
+  import(
+    /* webpackChunkName: "product-experience" */
+    'Organisms/Home/ProductsExperience.jsx'
+  )
+);
 
 export default function Home() {
+  let [animationEnded, setAnimationEnded] = useState(false);
   return (
     <main className='container-fluid home-view'>
-      <HeroHeader />
+      <HeroHeader animationStatus={setAnimationEnded} />
       <Features />
-      <ProductsExperience />
+      <Suspense
+        fallback={
+          <div class='spinner-border text-primary' role='status'>
+            <span class='sr-only'>Loading...</span>
+          </div>
+        }
+      >
+        {animationEnded ? (
+          <ProductsExperience />
+        ) : (
+          <div className='row m-0 mt-5 justify-content-center align-items-center'>
+            <div class='spinner-border text-primary' role='status'>
+              <span class='sr-only'>Loading...</span>
+            </div>
+          </div>
+        )}
+      </Suspense>
     </main>
   );
 }

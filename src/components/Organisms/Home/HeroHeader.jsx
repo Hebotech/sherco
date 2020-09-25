@@ -2,10 +2,13 @@ import React from 'react';
 
 import IntroAnimation from 'Organisms/Home/IntroAnimation';
 
-export default function HeroHeader({ featuresRef }) {
+export default function HeroHeader({ featuresRef, animationStatus }) {
   return (
     <>
-      <IntroAnimation featuresRef={featuresRef} />
+      <IntroAnimation
+        featuresRef={featuresRef}
+        animationStatus={animationStatus}
+      />
       <div className='row m-0 _hero-header justify-content-between'>
         <div className='col-md-6 text-left _title'>
           {/* <h2>

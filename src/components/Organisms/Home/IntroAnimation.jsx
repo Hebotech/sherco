@@ -123,7 +123,10 @@ export default function IntroAnimation(props) {
         },
         '-=1.2'
       )
-      .eventCallback('onComplete', () => setAnimationFinish(true));
+      .eventCallback('onComplete', () => {
+        setAnimationFinish(true);
+        props.animationStatus(true);
+      });
 
     let tl2 = gsap.timeline({
       scrollTrigger: {
