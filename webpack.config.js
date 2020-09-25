@@ -27,6 +27,7 @@ module.exports = (_, env) => {
           {
             test: /\.css$/,
             use: ['style-loader', 'css-loader', 'sass-loader'],
+            sideEffects: true,
           },
           {
             test: /\.s[ac]ss$/i,
@@ -38,6 +39,7 @@ module.exports = (_, env) => {
               // Compiles Sass to CSS
               'sass-loader',
             ],
+            sideEffects: true,
           },
         ],
       },
@@ -88,9 +90,11 @@ module.exports = (_, env) => {
           {
             test: /\.css$/,
             use: ['style-loader', 'css-loader'],
+            sideEffects: true,
           },
           {
             test: /\.s[ac]ss$/i,
+            sideEffects: true,
             use: [
               // Creates `style` nodes from JS strings
               'style-loader',
