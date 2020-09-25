@@ -14,8 +14,9 @@ function ProductsExperience() {
   };
 
   return (
-    <div className='container-fluid align-items-center product-experience'>
-      <div className='row justify-content-center justify-content-md-around mt-5 mb-5 m-0'>
+    <div className='pt-5 container-fluid align-items-center product-experience'>
+      <h2 className='mt-md-5 mb-md-4 text-center'>Nueva colección</h2>
+      <div className='row pl-md-5 pr-md-5 justify-content-center justify-content-md-around  m-0'>
         {products.map((product, productIndex) => (
           <ProductHome
             key={productIndex}

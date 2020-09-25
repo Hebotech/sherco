@@ -20,7 +20,7 @@ export default function Features() {
             loading='lazy'
           />
         </div>
-        <div className='col-md-4 col-12 text-left __cta'>
+        <div className='col-md-4 mt-md-0 mt-4 col-12 text-md-left text-center __cta'>
           <h2>Sé parte del movimiento </h2>
           <p className='mt-3 mb-3'>
             Sherco es una marca internacional que está especialmente orientada a

@@ -89,14 +89,14 @@ export default function ActiveProductPresentation({ product, options }) {
       }`}
     >
       <div className='col-md-3 col-12'>
-        <h5>Information</h5>
+        <h5>Información</h5>
         <ul>
           {product.features.map((feature) => (
             <li key={feature}>{feature}</li>
           ))}
         </ul>
         <div
-          className={`_cta-wrapper mb-3 d-flex flex-column ${
+          className={`_cta-wrapper mb-3 d-flex flex-column align-items-center ${
             options.productIndex % 2 === 0
               ? 'align-items-md-start'
               : 'align-items-md-end'
@@ -107,11 +107,11 @@ export default function ActiveProductPresentation({ product, options }) {
             refIcons={{ galleryIconRef, productIconRef }}
           />
           <button className='__cta d-inline' onClick={handleClickIcon}>
-            Ver {carouselContent === 'product' ? 'producto' : 'galería'}
+            Ver {carouselContent === 'gallery' ? 'producto' : 'galería'}
           </button>
         </div>
       </div>
-      <div className='col-md-7 col-12'>
+      <div className='col-md-9 col-12'>
         {carouselContent === 'product' ? (
           <ProductCarousel
             key={carouselContent}

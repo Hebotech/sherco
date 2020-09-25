@@ -42,9 +42,9 @@ export default function ProductHome({
       ) : (
         <>
           {motorcycleOpen ? (
-            <h5 className='mt-md- mt-5'>{product.titles}</h5>
+            <h5 className='mt-md-0 mt-5'>{product.titles}</h5>
           ) : (
-            <h3 className='mt-md- mt-5'>{product.titles}</h3>
+            <h3 className='mt-md-0 mt-5'>{product.titles}</h3>
           )}
 
           <img

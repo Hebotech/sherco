@@ -97,6 +97,9 @@
   }
 }
 .product-experience {
+  h2 {
+    text-decoration: underline $alpha-color;
+  }
   .active-product {
     h3 {
       text-decoration: underline $complementary-color;
@@ -186,7 +189,7 @@
   }
   .swiper-scrollbar-drag {
     @media screen and (min-width: 750px) {
-      margin-top: 0;
+      margin-top: -1%;
     }
     margin-top: -0.5%;
     height: 20px;
