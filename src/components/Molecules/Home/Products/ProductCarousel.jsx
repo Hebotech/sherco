@@ -7,19 +7,20 @@ import SwiperCore, {
   Navigation,
   Scrollbar,
   EffectFade,
-  Mousewheel,
+  EffectCube,
 } from 'swiper';
 
 import 'swiper/components/navigation/navigation.scss';
 
 import 'swiper/components/scrollbar/scrollbar.scss';
+import 'swiper/components/effect-cube/effect-cube.scss';
 import 'swiper/components/effect-fade';
 import 'swiper/swiper.scss';
 
-SwiperCore.use([Navigation, EffectFade, Mousewheel, Scrollbar]);
+SwiperCore.use([Navigation, EffectFade, Scrollbar, EffectCube]);
 
-export default function ProductCarousel({ images, name }) {
-  return (
+export default function ProductCarousel({ content, images, name }) {
+  return content === 'product' ? (
     <Swiper
       effect='fade'
       speed={0.01}
@@ -38,6 +39,25 @@ export default function ProductCarousel({ images, name }) {
           {({ isActive }) => (
             <ProductSlide isActive={isActive} image={images} name={name} />
           )}
+        </SwiperSlide>
+      ))}
+    </Swiper>
+  ) : (
+    <Swiper
+      effect='cube'
+      cubeEffect={{
+        shadow: true,
+        slideShadows: true,
+        shadowOffset: 20,
+        shadowScale: 0.94,
+      }}
+      slidesPerView={1}
+      navigation
+      grabCursor={true}
+    >
+      {images.map((images, imagesIndex) => (
+        <SwiperSlide className='text-center' key={imagesIndex}>
+          <img className='img-fluid gallery-image' src={images} alt='' />
         </SwiperSlide>
       ))}
     </Swiper>

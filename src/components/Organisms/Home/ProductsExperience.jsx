@@ -25,7 +25,6 @@ function ProductsExperience() {
             productIndex={productIndex}
           />
         ))}
-        <div className='col-6 swiperr'></div>
       </div>
     </div>
   );
