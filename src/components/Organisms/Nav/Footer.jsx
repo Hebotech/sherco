@@ -25,7 +25,7 @@ export default function Footer() {
           <h5>Siguenos en Facebook</h5>
           <a
             href='https://www.facebook.com/Sherco-Enduro-Mexico-103188164713571'
-            rel='nofollow'
+            rel='noreferrer'
             target='_blank'
             className='facebook-ref'
           >

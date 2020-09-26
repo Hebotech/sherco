@@ -24,6 +24,7 @@ export default function ButtonForm() {
     <>
       <a
         className='typeform-share button cta-form'
+        rel='noreferrer'
         href='https://form.typeform.com/to/IbzQYyWz'
         data-mode='popup'
         target='_blank'
