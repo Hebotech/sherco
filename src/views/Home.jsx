@@ -17,8 +17,8 @@ export default function Home() {
       <Features />
       <Suspense
         fallback={
-          <div class='spinner-border text-primary' role='status'>
-            <span class='sr-only'>Loading...</span>
+          <div className='spinner-border text-primary' role='status'>
+            <span className='sr-only'>Loading...</span>
           </div>
         }
       >
@@ -26,8 +26,8 @@ export default function Home() {
           <ProductsExperience />
         ) : (
           <div className='row m-0 mt-5 justify-content-center align-items-center'>
-            <div class='spinner-border text-primary' role='status'>
-              <span class='sr-only'>Loading...</span>
+            <div className='spinner-border text-primary' role='status'>
+              <span className='sr-only'>Loading...</span>
             </div>
           </div>
         )}

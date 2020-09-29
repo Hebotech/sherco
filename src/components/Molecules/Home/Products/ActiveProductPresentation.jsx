@@ -96,7 +96,7 @@ export default function ActiveProductPresentation({ product, options }) {
           ))}
         </ul>
         <div
-          className={`_cta-wrapper mb-3 d-flex flex-column align-items-center ${
+          className={`_cta-wrapper mb-3 d-flex flex-column align-self-center ${
             options.productIndex % 2 === 0
               ? 'align-items-md-start'
               : 'align-items-md-end'
