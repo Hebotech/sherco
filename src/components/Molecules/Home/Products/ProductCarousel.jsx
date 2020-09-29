@@ -7,6 +7,7 @@ import SwiperCore, {
   Navigation,
   Scrollbar,
   EffectFade,
+  Zoom,
   EffectCube,
 } from 'swiper';
 
@@ -14,10 +15,11 @@ import 'swiper/components/navigation/navigation.scss';
 
 import 'swiper/components/scrollbar/scrollbar.scss';
 import 'swiper/components/effect-cube/effect-cube.scss';
+import 'swiper/components/zoom/zoom.scss';
 import 'swiper/components/effect-fade';
 import 'swiper/swiper.scss';
 
-SwiperCore.use([Navigation, EffectFade, Scrollbar, EffectCube]);
+SwiperCore.use([Navigation, EffectFade, Scrollbar, EffectCube, Zoom]);
 
 export default function ProductCarousel({ content, images, name }) {
   return content === 'product' ? (
@@ -30,6 +32,7 @@ export default function ProductCarousel({ content, images, name }) {
       freeModeMomentumRatio={0.3}
       freeModeSticky={false}
       freeModeMomentumBounce={false}
+      zoom={true}
       scrollbar={{ draggable: true, dragSize: 100 }}
       navigation
       loop={true}
@@ -51,6 +54,7 @@ export default function ProductCarousel({ content, images, name }) {
         shadowOffset: 20,
         shadowScale: 0.94,
       }}
+      zoom={true}
       slidesPerView={1}
       navigation
       grabCursor={true}
