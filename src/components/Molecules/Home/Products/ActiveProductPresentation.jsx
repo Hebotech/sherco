@@ -5,7 +5,7 @@ import ProductCarousel from 'Molecules/Home/Products/ProductCarousel';
 import ProductActionAnimation from 'Atoms/ProductIconAnimation';
 
 import { gsap } from 'gsap';
-import MorphSVGPlugin from 'gsap/MorphSVG';
+import MorphSVGPlugin from 'Utilities/MorphSvg';
 
 export default function ActiveProductPresentation({ product, options }) {
   let [carouselContent, setCarouselContent] = useState('product');

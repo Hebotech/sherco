@@ -1,8 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
 
-import { gsap } from 'gsap';
-import MorphSVGPlugin from 'gsap/MorphSVG';
-
 export default function LogoAnimation({ logoRef, letterLogoRef }) {
   // var logoRef = useRef(null);
   // var letterLogoRef = useRef(null);

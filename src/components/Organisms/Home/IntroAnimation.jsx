@@ -1,8 +1,8 @@
 import React, { useEffect, useState, useRef } from 'react';
 
 import { gsap, TweenLite } from 'gsap';
-import MorphSVGPlugin from 'gsap/MorphSVG';
-import SplitText from 'gsap/SplitText';
+import MorphSVGPlugin from 'Utilities/MorphSvg.js';
+import SplitText from 'Utilities/SplitToText.js';
 import ScrollTrigger from 'gsap/ScrollTrigger';
 
 import TextAnimation from 'Molecules/Home/TextAnimation.jsx';

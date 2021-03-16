@@ -1,7 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 
 import { gsap } from 'gsap/dist/gsap';
-import SplitText from 'gsap/SplitText';
 
 export default function TextAnimation({ titleAnimation }) {
   //  gsap.registerPlugin(SplitText);

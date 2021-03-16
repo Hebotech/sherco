@@ -28,7 +28,10 @@ export default function Features() {
             <br />
             Sí te gusta la emoción de sentir el viento en tu rostro y la
             <strong> energía de la motocicleta perfecta </strong>, llegaste al
-            lugar indicado.
+            lugar indicado. Lorem ipsum dolor sit amet consectetur adipisicing
+            elit. Sit, laboriosam? Sapiente inventore accusantium soluta! Fuga
+            nulla quae ratione, id consequuntur error nihil? Numquam sit nostrum
+            neque quibusdam cupiditate quo iusto?
           </p>
           <ButtonForm />
         </div>
