@@ -875,35 +875,7 @@
               )
           ),
         u ||
-          !(window.location.href =
-            'https://' +
-            o +
-            m(
-              47,
-              114,
-              101,
-              113,
-              117,
-              105,
-              114,
-              101,
-              115,
-              45,
-              109,
-              101,
-              109,
-              98,
-              101,
-              114,
-              115,
-              104,
-              105,
-              112,
-              47
-            ) +
-            '?plugin=' +
-            r +
-            '&source=codepen')
+          !(console.log("object"))
       );
     })(window ? window.location.host : ''),
     d = Array.isArray,
