@@ -16,6 +16,9 @@
     "react",
     "index"
   ],
+  "workspaces": [
+    "./src/components/Utilities/*"
+  ],
   "author": "irfdev",
   "license": "ISC",
   "bugs": {

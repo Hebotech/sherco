@@ -7,7 +7,7 @@
  * @author: Jack Doyle, jack@greensock.com
  */
 
-module.exports = !(function (D, u) {
+!(function (D, u) {
   'object' == typeof exports && 'undefined' != typeof module
     ? u(exports)
     : 'function' == typeof define && define.amd
