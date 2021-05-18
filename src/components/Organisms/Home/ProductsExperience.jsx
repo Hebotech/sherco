@@ -1,10 +1,8 @@
 import React, { useState } from 'react';
 
-import { products } from '../../../data/Products';
-
 import ProductHome from 'Molecules/Home/Products/ProductHome';
 
-function ProductsExperience() {
+function ProductsExperience({ products }) {
   const [motorcycleOpen, setMotorcycleOpen] = useState(false);
 
   const toggleMotorcycleOpen = () => {

@@ -38,7 +38,7 @@ export default function ProductHome({
     >
       {activeProduct ? (
         <>
-          <h3>{product.titles}</h3>
+          <h3>{product.name}</h3>
           <Suspense
             fallback={
               <div class='spinner-border text-primary' role='status'>
@@ -55,15 +55,15 @@ export default function ProductHome({
       ) : (
         <>
           {motorcycleOpen ? (
-            <h5 className='mt-md-0 mt-5'>{product.titles}</h5>
+            <h5 className='mt-md-0 mt-5'>{product.name}</h5>
           ) : (
-            <h3 className='mt-md-0 mt-5'>{product.titles}</h3>
+            <h3 className='mt-md-0 mt-5'>{product.name}</h3>
           )}
 
           <img
             className='img-fluid'
-            src={product.images[0]}
-            alt={`Sherco México ${product.titles}`}
+            src={product.images[0].src}
+            alt={`Sherco México ${product.name}`}
           />
         </>
       )}
