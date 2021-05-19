@@ -13,22 +13,30 @@ export default function Home() {
   let [animationEnded, setAnimationEnded] = useState(false);
   let [asyncStatus, setAsyncStatus] = useState(false);
   let [products, setProducts] = useState([]);
+  let [brandInfo, setBrandInfo] = useState(false);
 
   useEffect(() => {
-    async function getProducts() {
+    async function getProductsAndInfo() {
       let apiResponse = await fetch('https://apihebo.online/sherco');
       let responseJson = await apiResponse.json();
 
       setProducts(responseJson.data);
+
+      let apiResponseBrand = await fetch('https://apihebo.online/sherco/brand');
+
+      let responseJsonBrand = await apiResponseBrand.json();
+
+      setBrandInfo(responseJsonBrand.data);
+
       setAsyncStatus(true);
     }
 
-    getProducts();
+    getProductsAndInfo();
   }, []);
 
   return (
     <main className='container-fluid home-view'>
-      <HeroHeader animationStatus={setAnimationEnded} />
+      <HeroHeader brandInfo={brandInfo} animationStatus={setAnimationEnded} />
       <Features />
       <Suspense
         fallback={
